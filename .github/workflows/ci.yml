@@ -14,9 +14,9 @@ jobs:
   test:
     name: test
     env:
-        MSRV: "1.41.1"
       # Emit backtraces on panics.
       RUST_BACKTRACE: 1
+      MSRV: "1.41.1"
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
