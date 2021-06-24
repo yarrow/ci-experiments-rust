@@ -144,7 +144,6 @@ jobs:
     - name: Build archive
       shell: bash
       run: |
-        outdir="$(ci/cargo-out-dir "${{ env.TARGET_DIR }}")"
         staging="ci-experiments-rust-${{ needs.create-release.outputs.release_version }}-${{ matrix.target }}"
         mkdir "$staging"
 
