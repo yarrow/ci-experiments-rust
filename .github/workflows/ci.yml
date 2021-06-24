@@ -6,8 +6,8 @@ on:
   push:
     branches:
     - main
-# schedule:
-# - cron: '00 01 * * *'
+  schedule:
+  - cron: '21 8 * * sat'
 jobs:
   test:
     name: test
