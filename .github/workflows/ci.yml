@@ -1,7 +1,6 @@
 # Based on ci.yml in BurntSushi/ripgrep
 #
 name: ci
-
 on:
   workflow_dispatch
   # pull_request:
@@ -16,7 +15,6 @@ jobs:
     env:
       # Emit backtraces on panics.
       RUST_BACKTRACE: 1
-      MSRV: "1.41.1"
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -32,7 +30,7 @@ jobs:
         include:
         - build: pinned
           os: ubuntu-18.04
-          rust: ${{ env.MSRV }}
+          rust: 1.41.1
         - build: stable
           os: ubuntu-18.04
           rust: stable
